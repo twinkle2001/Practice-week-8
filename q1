@@ -13,7 +13,6 @@ public class q1 {
 	       }
 	       else
 	    	   System.out.println("The string consists of no vowels."); 
-	    	   
-	}
+	    	   }
 
 }
