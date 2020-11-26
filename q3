@@ -16,8 +16,6 @@ public class q3 {
 	public static int AbsDiff(int X, int Y, int A, 
             int B, int N) 
 { 
-
-
 int maxDiff = 0; 
 
  
