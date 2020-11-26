@@ -1,0 +1,73 @@
+import java.util.Scanner;
+public class q3 {
+
+	public static void main(String[] args) {
+		Scanner s=new Scanner(System.in);
+		System.out.println("ENTER THE VALUES OF X,Y,A,B:");
+		int X = s.nextInt();
+	    int Y = s.nextInt();
+	    int A = s.nextInt();
+	    int B = s.nextInt();
+	    int N = s.nextInt(); 
+	     
+	    System.out.println(maxAbsDiff(X, Y, A, B, N));
+
+	}
+	public static int AbsDiff(int X, int Y, int A, 
+            int B, int N) 
+{ 
+
+
+int maxDiff = 0; 
+
+ 
+int n1 = X - A; 
+
+
+X = X - Math.min(N, n1); 
+
+
+N = N - Math.min(N, n1); 
+
+
+int n2 = Y - B; 
+
+
+Y = Y - Math.min(N, n2); 
+
+ 
+maxDiff = Math.abs(X - Y); 
+
+return maxDiff; 
+} 
+
+
+public static int maxAbsDiff(int X, int Y, int A, 
+               int B, int N) 
+{ 
+
+
+int diffX_Y_1; 
+
+
+int diffX_Y_2; 
+
+
+diffX_Y_1 = AbsDiff(X, Y, A, B, N); 
+
+ 
+int temp1 = X;
+X = Y;
+Y = temp1;
+
+int temp2 = A;
+A = B;
+B = temp2;
+
+
+diffX_Y_2 = AbsDiff(X, Y, A, B, N); 
+
+return Math.max(diffX_Y_1, diffX_Y_2); 
+}
+
+}
