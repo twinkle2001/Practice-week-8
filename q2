@@ -26,5 +26,4 @@ public class q2 {
 	    }
 	    System.out.println("Purifier purifies "+ ar +" sq/min with the given conditions.");
 	}
-
 }
