@@ -1,0 +1,30 @@
+import java.util.Scanner;
+public class q2 {
+
+	public static void main(String[] args) {
+		Scanner s= new Scanner(System.in);
+		System.out.println(" Enter the temperature of room in deg C:");
+		double temp=s.nextDouble();
+		System.out.println("Enter the times door opened : ");
+	    int d=s.nextInt();
+	    System.out.println("Operating time of purifier in min :");
+	    double t=s.nextDouble();
+	    double cd,ar=0;
+	    if(temp==25)
+	    {
+	    	ar=40*(t-d)+30*d;
+	    }
+	    else if(temp>25)
+	    {
+	    	cd=40+(2*(temp-25));
+	    	ar=cd*(t-d)+(cd-10)*d;
+	    }
+	    else if(temp<25)
+	    {
+	    	cd=40-(2*(25-temp));
+	    	ar=cd*(t-d)+(cd-10)*d;
+	    }
+	    System.out.println("Purifier purifies "+ ar +" sq/min with the given conditions.");
+	}
+
+}
